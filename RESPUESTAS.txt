@@ -3,25 +3,29 @@ Nombre: Diego Ramírez
 
 1. Explica dos diferencias entre una API REST y un servidor GraphQL.
 
-Respuesta:
+En REST normalmente se usan varias rutas dependiendo de lo que quieras hacer, por ejemplo una para ver todas las laptops y otra para ver solo las disponibles. En GraphQL normalmente se usa un solo endpoint y desde ahí haces las consultas.
 
 
 2. Indica una situación en la que conviene usar REST y otra en la que conviene usar GraphQL.
 
-Respuesta:
+Yo usaría REST para algo más sencillo, por ejemplo un CRUD como el de las laptops, porque las operaciones son bastante directas.
+GraphQL lo usaría cuando necesito consultar información que está más relacionada, por ejemplo los talleres con su instructor, y no quiero traer datos que no necesito.
 
 
 3. ¿Qué diferencia hay entre una imagen y un contenedor? ¿Qué papel cumple el Dockerfile en esa relación?
 
-Respuesta:
+Una imagen sería lo que ya tiene preparado todo lo necesario para correr el proyecto, como Python, las librerías y los archivos. El contenedor es cuando esa imagen ya está ejecutándose.
+El Dockerfile básicamente tiene las instrucciones para crear esa imagen, por ejemplo qué versión de Python usar, instalar los requerimientos y copiar el proyecto.
 
 
 4. ¿Para qué sirve Docker Compose? En el mapeo 8000:8000, ¿qué representa el primer 8000 y qué representa el segundo?
 
-Respuesta:
+Docker Compose sirve para levantar varios servicios juntos. En este caso nos sirve para correr la API y MySQL sin tener que iniciar cada uno por separado.
+En 8000:8000, el primer 8000 es el puerto de mi computadora y el segundo es el puerto que usa la aplicación dentro del contenedor.
 
 
 5. ¿Por qué las laptops del ejercicio 1 se guardan en MySQL y no en una lista de Python? ¿Qué identifica la llave primaria id?
 
-Respuesta:
+Se guardan en MySQL porque así las laptops siguen guardadas aunque reinicie o apague la API. Si estuvieran solamente en una lista de Python, al cerrar el programa esa información se perdería.
+El id sirve para identificar cada laptop de manera única y poder saber exactamente con qué registro estamos trabajando.
 
